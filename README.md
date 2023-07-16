@@ -38,7 +38,7 @@ Posteriormente se debe importar y luego usar la etiqueta <TheNotification/> en l
 Como opcional también se puede pasar la propiedad de *autoCloseTime*, para definir el tiempo en milisegundos en que la notificación tardara en cerrarse automáticamente; el valor predeterminado de este es **"5000"**. Si no se desea que la notificación se cierre automáticamente, puede definir la propiedad *:autoClose="false"*
 
 
-A continuación un ejemplo:
+A continuación, un ejemplo:
 
 ```vue 
 <template>
