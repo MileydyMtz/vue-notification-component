@@ -14,7 +14,7 @@ A continuación, se enlistan las tecnologías y librerías utilizadas en el desa
 ## Características del componente
 ### Props
 El componente *Notification* tiene 4 propiedades:
-* **type** (String): Define el tipo de notificación. Puede ser uno de los siguientes: *info*, *error*, *warning*, *success*. Cada tipo de notificación se muestra con un estilo visual diferente. El valor por defecto es *info'*.
+* **type** (String): Define el tipo de notificación. Puede ser uno de los siguientes: *info*, *error*, *warning*, *success*. Cada tipo de notificación se muestra con un estilo visual diferente. El valor por defecto es *info*.
 * **message** (String): Define el mensaje que se mostrará en la notificación. Esta propiedad es requerida.
 * **autoClose** (Boolean): Si es true, la notificación se cerrará automáticamente después de un cierto tiempo. El valor por defecto es true.
 * **autoCloseTime** (Number): Define el tiempo (en milisegundos) que durará la notificación antes de cerrarse automáticamente. El valor por defecto es *5000* (5 segundos). Esta propiedad solo tiene efecto si *autoClose* es *true*.
