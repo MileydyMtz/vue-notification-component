@@ -1,13 +1,13 @@
 <script setup>
-import TheNotification from './components/TheNotification.vue';
+import Notification from './components/TheNotification.vue';
 </script>
 
 <template>
   <main>
-    <TheNotification 
-    type = "success" 
-    message="Success!"
-    :autoClose="false"
+    <Notification 
+      type = "success" 
+      message="Success!"
+      :autoClose="false"
     />
   </main>
 </template>
