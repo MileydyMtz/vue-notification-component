@@ -19,7 +19,7 @@ El componente *Notification* tiene 4 propiedades:
 * **autoClose** (Boolean): Si es true, la notificación se cerrará automáticamente después de un cierto tiempo. El valor por defecto es true.
 * **autoCloseTime** (Number): Define el tiempo (en milisegundos) que durará la notificación antes de cerrarse automáticamente. El valor por defecto es *5000* (5 segundos). Esta propiedad solo tiene efecto si *autoClose* es *true*.
 
-### CSS
+### Estilos
 * Los estilos están definidos en la sección de <style> y usan la extensión .scss.
 * Los estilos están "scoped", lo que significa que solo se aplicarán a este componente y no afectarán a otros componentes de la aplicación donde se reutilice.
 * Los colores y estilos de las notificaciones varían en función del tipo de notificación. Las notificaciones de *info* son de color azul, las de  *error* son de color rojo, las de *warning* son de color amarillo y las de *success* son de color verde.
@@ -34,26 +34,26 @@ El componente tiene un método:
 
 ## Uso del componente
 Para utilizar este componente, primero se debe descargar el archivo *TheNotification.vue* que se encuentra dentro de *src/components* y agregarlo al proyecto donde se reutilizara. 
-Posteriormente se debe importar y luego usar la etiqueta <TheNotification/> en la plantilla HTML con las propiedades requeridas de *type* y *message*. 
+Posteriormente se debe importar y luego usar la etiqueta <Notification/> en la plantilla HTML con las propiedades requeridas de *type* y *message*. 
 Como opcional también se puede pasar la propiedad de *autoCloseTime*, para definir el tiempo en milisegundos en que la notificación tardara en cerrarse automáticamente; el valor predeterminado de este es **"5000"**. Si no se desea que la notificación se cierre automáticamente, puede definir la propiedad *:autoClose="false"*
 
 
 A continuación, un ejemplo:
 
 ```vue 
+<script setup>
+import Notification from './components/TheNotification.vue';
+</script>
+
 <template>
   <main>
-    <TheNotification 
-    type="success" 
-    message="Success!"
-    :autoCloseTime:"7000"
+    <Notification 
+      type = "success" 
+      message="Success!"
+      :autoClose="false"
     />
   </main>
 </template>
-
-<script setup>
-import TheNotification from './components/TheNotification.vue';
-</script>
 
 ```
 
@@ -79,7 +79,7 @@ La implementación de este componente se puede ver de la siguiente forma:
 
 
 ## Pruebas
-Las pruebas se han implementado utilizando la biblioteca vitest para correr las pruebas y @vue/test-utils para montar el componente.
+Se utiliza la biblioteca Vitest para correr las pruebas y @vue/test-utils para montar el componente.
 
 A continuación, se muestran las pruebas implementadas:
 * **renders properly**: Esta prueba verifica si el componente se renderiza correctamente y si el mensaje pasado como propiedad se muestra en el componente.
